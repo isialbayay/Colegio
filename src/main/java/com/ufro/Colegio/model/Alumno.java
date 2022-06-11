@@ -11,8 +11,11 @@ public class Alumno {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "fecha_matricula")
-    private Timestamp fechaMatricula;
+    @Column(name = "matricula" nullable = false, length = 15 )
+    private String matricula;
+
+    @Column(name = "Nombre", nullable = false, length = 150 )
+    private String mensaje;
 
     @Column(name = "Nombre", nullable = false, length = 150 )
     private String mensaje;
