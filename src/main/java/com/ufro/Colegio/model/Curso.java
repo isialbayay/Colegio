@@ -13,6 +13,9 @@ public class Curso {
     @Column(name = "nombre", nullable = false, length = 80)
     private String nombre;
 
+    @Column(name = "profesor", nullable = false, length = 80)
+    private String profesor;
+
 
     public Curso() {
 
@@ -32,6 +35,14 @@ public class Curso {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getProfesor() {
+        return profesor;
+    }
+
+    public void setProfesor(String profesor) {
+        this.profesor = profesor;
     }
 }
 

@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" th:href="@{/style.css}">
     <meta charset="UTF-8">
-    <link href=' http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="inicio.html">STUDENTZ</a>
-        </nav>
+<header>
+    <nav>
+        <a th:href="@{/}">STUDENTZ</a>
+    </nav>
     </header>  
     <div class="cuerpo">
         <div class="contenido">
-            <form>
+            <form th:action="@{/registrar-curso/nuevo-curso}" method="post">
                 <div class="form-group dato">
                   <label for="formGroupExampleInput">Nombre del curso</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribir...">
+                  <input type="text" name="nombre" class="form-control" id="formGroupExampleInput" placeholder="Escribir...">
                 </div>
                 <div class="form-group dato">
                   <label for="formGroupExampleInput2">Profesor a cargo</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Escribir...">
+                  <input type="text" name="profesor" class="form-control" id="formGroupExampleInput2" placeholder="Escribir...">
                 </div>
                 <button type="submit" class="btn btn-primary registrar">Registrar</button>
               </form>
