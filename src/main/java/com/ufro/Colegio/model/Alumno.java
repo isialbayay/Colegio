@@ -22,7 +22,7 @@ public class Alumno {
     @Column(name = "Apoderado", nullable = false, length = 100)
     private String apoderado;
 
-    @Column(name = "telefono", nullable = false, length = 10)
+    @Column(name = "telefono", nullable = false, length = 13)
     private String telefono;
 
     @ManyToOne
