@@ -24,7 +24,7 @@
                     <div class="curso">
                         <p class="datos" th:text="${curso.getNombre()}"></p>
                         <p class="datos" th:text="${curso.getProfesor()}"></p>
-                        <a href="VerCurso.html" class="btn btn-primary">Ver</a>
+                        <a href="VerCurso.html" class="btn btn-primary" th:href="@{ver-curso(id= ${curso.getId()})}">Ver</a>
                     </div>
                 </div>
             </div>

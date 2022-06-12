@@ -16,17 +16,17 @@
     <div class="cuerpo">
         <div class="contenido">
             <div class="listado">                   
-                <h1 style="align-self:center">Curso: 3ro B</h1>
+                <h1 style="align-self:center" th:text="${curso.getNombre()}"></h1>
                 <div class="alumno">
                     <p class="titulos">Nombre</p>
                     <p class="titulos">Matrícula</p>
                     <p class="titulos">Curso</p>
                 </div>
-                <div class="alumno">
-                    <p class="datos">Diego Ignacio Martinez Valenzuela</p>
-                    <p class="datos">23111334221</p>
-                    <p class="datos">3ro B</p>
-                    <a href="verAlumno.html" class="btn btn-primary">Ver</a>
+                <div class="alumno" th:each="alumno:${alumnos}">
+                    <p class="datos" th:text="${alumno.getNombre()}"></p>
+                    <p class="datos" th:text="${alumno.getMatricula()}"></p>
+                    <p class="datos" th:text="${alumno.getCurso().getNombre()}"></p>
+                    <a class="btn btn-primary" th:href="@{ver-alumno(id= ${alumno.getId()})}">Ver</a>
                 </div>
                 
             </div>
