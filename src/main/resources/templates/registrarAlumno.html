@@ -39,7 +39,7 @@
                 <div class="form-group dato">
                 <label for="formGroupExampleInput2">Curso</label>
                 <select class="form-control" id="dropDownList" name="curso" required>
-                    <option style="display:none">Selecciona un curso</option>
+                    <option style="display:none" value="">Selecciona un curso</option>
                     <option th:each="curso:${cursos}" th:value="${curso.getId()}" th:text="${curso.getNombre()}"></option>
                 </select>
                 </div>
